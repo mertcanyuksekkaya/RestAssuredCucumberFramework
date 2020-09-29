@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="11" time="10.008351">
+<testcase classname="GET User Features" name="I get user list" time="3.716865">
+<system-out><![CDATA[Given I send get request /api/users.........................................passed
+When I should see status code 200...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login with out email" time="1.71466">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 400...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login with out password" time="0.518196">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 400...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login empty e-mail with out password" time="0.526513">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 400...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login empty password with out e-mail" time="0.49">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 400...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login empty e-mail with password" time="0.513479">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 400...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login empty password with e-mail" time="0.448159">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 400...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login with invalid e-mail and valid password data" time="0.47025">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 400...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login with valid e-mail and invalid password data" time="0.649722">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 200...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login with valid e-mail and valid password data" time="0.499453">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 200...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login POST Features" name="I try login with valid e-mail and valid password data" time="0.461054">
+<system-out><![CDATA[Given I send post request /api/login with parameters........................passed
+When I should see status code 200...........................................passed
+Then I should see following parameters......................................passed
+]]></system-out>
+</testcase>
+</testsuite>

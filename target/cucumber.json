@@ -1,0 +1,869 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# new feature"
+      },
+      {
+        "line": 2,
+        "value": "# Tags: optional"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 6,
+        "name": "I get user list",
+        "description": "",
+        "id": "get-user-features;i-get-user-list",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3714073900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I send get request /api/users",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/users",
+                  "offset": 19
+                }
+              ],
+              "location": "BaseRestSpec.IGetRequest(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2791100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I should see status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "GET User Features",
+    "description": "",
+    "id": "get-user-features",
+    "keyword": "Feature",
+    "uri": "GETUsers.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# new feature"
+      },
+      {
+        "line": 2,
+        "value": "# Tags: optional"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 6,
+        "name": "I try login with out email",
+        "description": "",
+        "id": "login-post-features;i-try-login-with-out-email",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 813404100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "password",
+                  "cityslicka"
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 184901,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should see status code 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 901070500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "error",
+                  "Missing email or username"
+                ],
+                "line": 11
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "I try login with out password",
+        "description": "",
+        "id": "login-post-features;i-try-login-with-out-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 490143799,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "eve.holt@reqres.in"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 182100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I should see status code 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27869999,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "error",
+                  "Missing password"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "I try login empty e-mail with out password",
+        "description": "",
+        "id": "login-post-features;i-try-login-empty-e-mail-with-out-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 509341500,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  ""
+                ],
+                "line": 22
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 114301,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I should see status code 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17057201,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "error",
+                  "Missing email or username"
+                ],
+                "line": 25
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 27,
+        "name": "I try login empty password with out e-mail",
+        "description": "",
+        "id": "login-post-features;i-try-login-empty-password-with-out-e-mail",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 461635999,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "password",
+                  ""
+                ],
+                "line": 29
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 250399,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I should see status code 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28113401,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "error",
+                  "Missing email or username"
+                ],
+                "line": 32
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "I try login empty e-mail with password",
+        "description": "",
+        "id": "login-post-features;i-try-login-empty-e-mail-with-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 483467799,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  ""
+                ],
+                "line": 36
+              },
+              {
+                "cells": [
+                  "password",
+                  "cityslicka"
+                ],
+                "line": 37
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 200400,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "I should see status code 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 29811200,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "error",
+                  "Missing email or username"
+                ],
+                "line": 40
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 42,
+        "name": "I try login empty password with e-mail",
+        "description": "",
+        "id": "login-post-features;i-try-login-empty-password-with-e-mail",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 430355099,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "eve.holt@reqres.in"
+                ],
+                "line": 44
+              },
+              {
+                "cells": [
+                  "password",
+                  ""
+                ],
+                "line": 45
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 154800,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I should see status code 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17648801,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "error",
+                  "Missing password"
+                ],
+                "line": 48
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 50,
+        "name": "I try login with invalid e-mail and valid password data",
+        "description": "",
+        "id": "login-post-features;i-try-login-with-invalid-e-mail-and-valid-password-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 441316800,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "eve.holt@reqres.in1"
+                ],
+                "line": 52
+              },
+              {
+                "cells": [
+                  "password",
+                  "cityslicka"
+                ],
+                "line": 53
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 135799,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I should see status code 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28797799,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "error",
+                  "user not found"
+                ],
+                "line": 56
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 58,
+        "name": "I try login with valid e-mail and invalid password data",
+        "description": "",
+        "id": "login-post-features;i-try-login-with-valid-e-mail-and-invalid-password-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 649495501,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "eve.holt@reqres.in"
+                ],
+                "line": 60
+              },
+              {
+                "cells": [
+                  "password",
+                  "cityslicka1111"
+                ],
+                "line": 61
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 226700,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "I should see status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 64,
+        "name": "I try login with valid e-mail and valid password data",
+        "description": "",
+        "id": "login-post-features;i-try-login-with-valid-e-mail-and-valid-password-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 465571100,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "eve.holt@reqres.in"
+                ],
+                "line": 66
+              },
+              {
+                "cells": [
+                  "password",
+                  "cityslicka"
+                ],
+                "line": 67
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 240601,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "I should see status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33641199,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "token",
+                  "QpwL5tke4Pnpja7X4"
+                ],
+                "line": 70
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 72,
+        "name": "I try login with valid e-mail and valid password data",
+        "description": "",
+        "id": "login-post-features;i-try-login-with-valid-e-mail-and-valid-password-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 459364600,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "I send post request /api/login with parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/login",
+                  "offset": 20
+                }
+              ],
+              "location": "BaseRestSpec.IPostRequest(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "eve.holt@reqres.in"
+                ],
+                "line": 74
+              },
+              {
+                "cells": [
+                  "password",
+                  "cityslicka"
+                ],
+                "line": 75
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 163001,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "I should see status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 25
+                }
+              ],
+              "location": "BaseRestSpec.ishouldSeeStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1526600,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "I should see following parameters",
+            "match": {
+              "location": "BaseRestSpec.iShouldSeeFollowingParameters(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "token",
+                  "not null"
+                ],
+                "line": 78
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login POST Features",
+    "description": "",
+    "id": "login-post-features",
+    "keyword": "Feature",
+    "uri": "LoginPost.feature"
+  }
+]
